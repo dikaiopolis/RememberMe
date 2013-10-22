@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C2BA79511816DFFD00F25769 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA79501816DFFD00F25769 /* Foundation.framework */; };
+		C2BA79531816DFFD00F25769 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA79521816DFFD00F25769 /* CoreGraphics.framework */; };
+		C2BA79551816DFFD00F25769 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA79541816DFFD00F25769 /* UIKit.framework */; };
+		C2BA79571816DFFD00F25769 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA79561816DFFD00F25769 /* CoreData.framework */; };
+		C2BA795D1816DFFD00F25769 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2BA795B1816DFFD00F25769 /* InfoPlist.strings */; };
+		C2BA795F1816DFFD00F25769 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BA795E1816DFFD00F25769 /* main.m */; };
+		C2BA79631816DFFD00F25769 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BA79621816DFFD00F25769 /* AppDelegate.m */; };
+		C2BA79661816DFFD00F25769 /* RememberMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2BA79641816DFFD00F25769 /* RememberMe.xcdatamodeld */; };
+		C2BA79681816DFFD00F25769 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2BA79671816DFFD00F25769 /* Images.xcassets */; };
+		C2BA796F1816DFFD00F25769 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA796E1816DFFD00F25769 /* XCTest.framework */; };
+		C2BA79701816DFFD00F25769 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA79501816DFFD00F25769 /* Foundation.framework */; };
+		C2BA79711816DFFD00F25769 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA79541816DFFD00F25769 /* UIKit.framework */; };
+		C2BA79721816DFFD00F25769 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA79561816DFFD00F25769 /* CoreData.framework */; };
+		C2BA797A1816DFFD00F25769 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2BA79781816DFFD00F25769 /* InfoPlist.strings */; };
+		C2BA797C1816DFFD00F25769 /* RememberMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BA797B1816DFFD00F25769 /* RememberMeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2BA79731816DFFD00F25769 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2BA79451816DFFD00F25769 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2BA794C1816DFFD00F25769;
+			remoteInfo = RememberMe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C2BA794D1816DFFD00F25769 /* RememberMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RememberMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2BA79501816DFFD00F25769 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C2BA79521816DFFD00F25769 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C2BA79541816DFFD00F25769 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C2BA79561816DFFD00F25769 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C2BA795A1816DFFD00F25769 /* RememberMe-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RememberMe-Info.plist"; sourceTree = "<group>"; };
+		C2BA795C1816DFFD00F25769 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C2BA795E1816DFFD00F25769 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C2BA79601816DFFD00F25769 /* RememberMe-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RememberMe-Prefix.pch"; sourceTree = "<group>"; };
+		C2BA79611816DFFD00F25769 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C2BA79621816DFFD00F25769 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C2BA79651816DFFD00F25769 /* RememberMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RememberMe.xcdatamodel; sourceTree = "<group>"; };
+		C2BA79671816DFFD00F25769 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C2BA796D1816DFFD00F25769 /* RememberMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RememberMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2BA796E1816DFFD00F25769 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C2BA79771816DFFD00F25769 /* RememberMeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RememberMeTests-Info.plist"; sourceTree = "<group>"; };
+		C2BA79791816DFFD00F25769 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C2BA797B1816DFFD00F25769 /* RememberMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RememberMeTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2BA794A1816DFFD00F25769 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2BA79531816DFFD00F25769 /* CoreGraphics.framework in Frameworks */,
+				C2BA79571816DFFD00F25769 /* CoreData.framework in Frameworks */,
+				C2BA79551816DFFD00F25769 /* UIKit.framework in Frameworks */,
+				C2BA79511816DFFD00F25769 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2BA796A1816DFFD00F25769 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2BA796F1816DFFD00F25769 /* XCTest.framework in Frameworks */,
+				C2BA79721816DFFD00F25769 /* CoreData.framework in Frameworks */,
+				C2BA79711816DFFD00F25769 /* UIKit.framework in Frameworks */,
+				C2BA79701816DFFD00F25769 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C2BA79441816DFFD00F25769 = {
+			isa = PBXGroup;
+			children = (
+				C2BA79581816DFFD00F25769 /* RememberMe */,
+				C2BA79751816DFFD00F25769 /* RememberMeTests */,
+				C2BA794F1816DFFD00F25769 /* Frameworks */,
+				C2BA794E1816DFFD00F25769 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C2BA794E1816DFFD00F25769 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2BA794D1816DFFD00F25769 /* RememberMe.app */,
+				C2BA796D1816DFFD00F25769 /* RememberMeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2BA794F1816DFFD00F25769 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2BA79501816DFFD00F25769 /* Foundation.framework */,
+				C2BA79521816DFFD00F25769 /* CoreGraphics.framework */,
+				C2BA79541816DFFD00F25769 /* UIKit.framework */,
+				C2BA79561816DFFD00F25769 /* CoreData.framework */,
+				C2BA796E1816DFFD00F25769 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2BA79581816DFFD00F25769 /* RememberMe */ = {
+			isa = PBXGroup;
+			children = (
+				C2BA79611816DFFD00F25769 /* AppDelegate.h */,
+				C2BA79621816DFFD00F25769 /* AppDelegate.m */,
+				C2BA79671816DFFD00F25769 /* Images.xcassets */,
+				C2BA79641816DFFD00F25769 /* RememberMe.xcdatamodeld */,
+				C2BA79591816DFFD00F25769 /* Supporting Files */,
+			);
+			path = RememberMe;
+			sourceTree = "<group>";
+		};
+		C2BA79591816DFFD00F25769 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2BA795A1816DFFD00F25769 /* RememberMe-Info.plist */,
+				C2BA795B1816DFFD00F25769 /* InfoPlist.strings */,
+				C2BA795E1816DFFD00F25769 /* main.m */,
+				C2BA79601816DFFD00F25769 /* RememberMe-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C2BA79751816DFFD00F25769 /* RememberMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2BA797B1816DFFD00F25769 /* RememberMeTests.m */,
+				C2BA79761816DFFD00F25769 /* Supporting Files */,
+			);
+			path = RememberMeTests;
+			sourceTree = "<group>";
+		};
+		C2BA79761816DFFD00F25769 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2BA79771816DFFD00F25769 /* RememberMeTests-Info.plist */,
+				C2BA79781816DFFD00F25769 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2BA794C1816DFFD00F25769 /* RememberMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2BA797F1816DFFD00F25769 /* Build configuration list for PBXNativeTarget "RememberMe" */;
+			buildPhases = (
+				C2BA79491816DFFD00F25769 /* Sources */,
+				C2BA794A1816DFFD00F25769 /* Frameworks */,
+				C2BA794B1816DFFD00F25769 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RememberMe;
+			productName = RememberMe;
+			productReference = C2BA794D1816DFFD00F25769 /* RememberMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2BA796C1816DFFD00F25769 /* RememberMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2BA79821816DFFD00F25769 /* Build configuration list for PBXNativeTarget "RememberMeTests" */;
+			buildPhases = (
+				C2BA79691816DFFD00F25769 /* Sources */,
+				C2BA796A1816DFFD00F25769 /* Frameworks */,
+				C2BA796B1816DFFD00F25769 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2BA79741816DFFD00F25769 /* PBXTargetDependency */,
+			);
+			name = RememberMeTests;
+			productName = RememberMeTests;
+			productReference = C2BA796D1816DFFD00F25769 /* RememberMeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2BA79451816DFFD00F25769 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Daniel Baldwin & Ibrahim Ayad";
+				TargetAttributes = {
+					C2BA796C1816DFFD00F25769 = {
+						TestTargetID = C2BA794C1816DFFD00F25769;
+					};
+				};
+			};
+			buildConfigurationList = C2BA79481816DFFD00F25769 /* Build configuration list for PBXProject "RememberMe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C2BA79441816DFFD00F25769;
+			productRefGroup = C2BA794E1816DFFD00F25769 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2BA794C1816DFFD00F25769 /* RememberMe */,
+				C2BA796C1816DFFD00F25769 /* RememberMeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2BA794B1816DFFD00F25769 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2BA795D1816DFFD00F25769 /* InfoPlist.strings in Resources */,
+				C2BA79681816DFFD00F25769 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2BA796B1816DFFD00F25769 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2BA797A1816DFFD00F25769 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2BA79491816DFFD00F25769 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2BA79631816DFFD00F25769 /* AppDelegate.m in Sources */,
+				C2BA795F1816DFFD00F25769 /* main.m in Sources */,
+				C2BA79661816DFFD00F25769 /* RememberMe.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2BA79691816DFFD00F25769 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2BA797C1816DFFD00F25769 /* RememberMeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2BA79741816DFFD00F25769 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2BA794C1816DFFD00F25769 /* RememberMe */;
+			targetProxy = C2BA79731816DFFD00F25769 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C2BA795B1816DFFD00F25769 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2BA795C1816DFFD00F25769 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C2BA79781816DFFD00F25769 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2BA79791816DFFD00F25769 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C2BA797D1816DFFD00F25769 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C2BA797E1816DFFD00F25769 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2BA79801816DFFD00F25769 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RememberMe/RememberMe-Prefix.pch";
+				INFOPLIST_FILE = "RememberMe/RememberMe-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C2BA79811816DFFD00F25769 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RememberMe/RememberMe-Prefix.pch";
+				INFOPLIST_FILE = "RememberMe/RememberMe-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C2BA79831816DFFD00F25769 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RememberMe.app/RememberMe";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RememberMe/RememberMe-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RememberMeTests/RememberMeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C2BA79841816DFFD00F25769 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RememberMe.app/RememberMe";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RememberMe/RememberMe-Prefix.pch";
+				INFOPLIST_FILE = "RememberMeTests/RememberMeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2BA79481816DFFD00F25769 /* Build configuration list for PBXProject "RememberMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2BA797D1816DFFD00F25769 /* Debug */,
+				C2BA797E1816DFFD00F25769 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2BA797F1816DFFD00F25769 /* Build configuration list for PBXNativeTarget "RememberMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2BA79801816DFFD00F25769 /* Debug */,
+				C2BA79811816DFFD00F25769 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C2BA79821816DFFD00F25769 /* Build configuration list for PBXNativeTarget "RememberMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2BA79831816DFFD00F25769 /* Debug */,
+				C2BA79841816DFFD00F25769 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C2BA79641816DFFD00F25769 /* RememberMe.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C2BA79651816DFFD00F25769 /* RememberMe.xcdatamodel */,
+			);
+			currentVersion = C2BA79651816DFFD00F25769 /* RememberMe.xcdatamodel */;
+			path = RememberMe.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C2BA79451816DFFD00F25769 /* Project object */;
+}
