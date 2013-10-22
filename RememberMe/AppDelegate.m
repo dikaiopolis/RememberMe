@@ -16,10 +16,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //Adding the Parse applicationID and my clientKey to the project
+    [Parse setApplicationId:@"ED4yaoShOk3m0S9XJaWrH7Pjk6n1Ovc3T0SHZpC8"
+                  clientKey:@"2jNQHPyl1qz9XzOKL8bDPAwjURHValxN6tSFVLDb"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+/// The following is a test to see if Parse is saving.  Delete once you start getting the app working.
+//    
+//PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+//[testObject setObject:@"bar" forKey:@"foo"];
+//[testObject save];
+    
     return YES;
 }
 
