@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7FDB6A11817060400F434CE /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7FDB6A01817060400F434CE /* Storyboard.storyboard */; };
+		B7FDB6A71817083000F434CE /* NewAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FDB6A61817083000F434CE /* NewAccountViewController.m */; };
 		C2BA79511816DFFD00F25769 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA79501816DFFD00F25769 /* Foundation.framework */; };
 		C2BA79531816DFFD00F25769 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA79521816DFFD00F25769 /* CoreGraphics.framework */; };
 		C2BA79551816DFFD00F25769 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA79541816DFFD00F25769 /* UIKit.framework */; };
@@ -45,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B7FDB6A01817060400F434CE /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = ../Storyboard.storyboard; sourceTree = "<group>"; };
+		B7FDB6A51817083000F434CE /* NewAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewAccountViewController.h; path = ../NewAccountViewController.h; sourceTree = "<group>"; };
+		B7FDB6A61817083000F434CE /* NewAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewAccountViewController.m; path = ../NewAccountViewController.m; sourceTree = "<group>"; };
 		C2BA794D1816DFFD00F25769 /* RememberMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RememberMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2BA79501816DFFD00F25769 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C2BA79521816DFFD00F25769 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -155,8 +160,11 @@
 		C2BA79581816DFFD00F25769 /* RememberMe */ = {
 			isa = PBXGroup;
 			children = (
-				C2BA79611816DFFD00F25769 /* AppDelegate.h */,
 				C2BA79621816DFFD00F25769 /* AppDelegate.m */,
+				C2BA79611816DFFD00F25769 /* AppDelegate.h */,
+				B7FDB6A01817060400F434CE /* Storyboard.storyboard */,
+				B7FDB6A51817083000F434CE /* NewAccountViewController.h */,
+				B7FDB6A61817083000F434CE /* NewAccountViewController.m */,
 				C2BA79671816DFFD00F25769 /* Images.xcassets */,
 				C2BA79641816DFFD00F25769 /* RememberMe.xcdatamodeld */,
 				C2BA79591816DFFD00F25769 /* Supporting Files */,
@@ -270,6 +278,7 @@
 			files = (
 				C2BA795D1816DFFD00F25769 /* InfoPlist.strings in Resources */,
 				C2BA79681816DFFD00F25769 /* Images.xcassets in Resources */,
+				B7FDB6A11817060400F434CE /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +300,7 @@
 				C2BA79631816DFFD00F25769 /* AppDelegate.m in Sources */,
 				C2BA795F1816DFFD00F25769 /* main.m in Sources */,
 				C2BA79661816DFFD00F25769 /* RememberMe.xcdatamodeld in Sources */,
+				B7FDB6A71817083000F434CE /* NewAccountViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
