@@ -1,5 +1,5 @@
 //
-//  ParseLoginViewController.h
+//  UserProfileViewController.h
 //  RememberMe
 //
 //  Created by Daniel Baldwin on 10/23/13.
@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Parse/Parse.h>
 
-@interface ParseLoginViewController : PFLogInViewController
+@interface UserProfileViewController : UIViewController
+
 @end

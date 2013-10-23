@@ -13,30 +13,24 @@
 @end
 
 @implementation LogInViewController
+@synthesize usernameTextField, passwordTextField;
 
 -(void)viewDidLoad {
     [super viewDidLoad];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-     
-    if (![PFUser currentUser]) { // No user logged in
-        // Create the log in view controller
-        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
-        [logInViewController setDelegate:self]; // Set ourselves as the delegate
-         
-        // Create the sign up view controller
-        PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
-        [signUpViewController setDelegate:self]; // Set ourselves as the delegate
-         
-        // Assign our sign up controller to be displayed from the login controller
-        [logInViewController setSignUpController:signUpViewController]; 
-         
-        // Present the log in view controller
-        [self presentViewController:logInViewController animated:YES completion:NULL];
+    [self checkStatus];
+}
+
+- (void)checkStatus {
+
+//Checks to see if there is a user logged in and if there is performsSegue to that users homepage
+    if ([PFUser currentUser]) {
+        [self performSegueWithIdentifier:@"SegueToCurrentUserProfile" sender:self];
     }
 }
+
 
 #pragma mark Parse Delegate Methods
 // Sent to the delegate to determine whether the log in request should be submitted to the server.
@@ -69,45 +63,7 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-// Sent to the delegate to determine whether the sign up request should be submitted to the server.
-- (BOOL)signUpViewController:(PFSignUpViewController *)signUpController shouldBeginSignUp:(NSDictionary *)info {
-    BOOL informationComplete = YES;
-     
-    // loop through all of the submitted data
-    for (id key in info) {
-        NSString *field = [info objectForKey:key];
-        if (!field || field.length == 0) { // check completion
-            informationComplete = NO;
-            break;
-        }
-    }
-     
-    // Display an alert if a field wasn't completed
-    if (!informationComplete) {
-        [[[UIAlertView alloc] initWithTitle:@"Missing Information"
-                              message:@"Make sure you fill out all of the information!"
-                              delegate:nil
-                              cancelButtonTitle:@"ok"
-                              otherButtonTitles:nil] show];
-    }
-     
-    return informationComplete;
-}
 
-// Sent to the delegate when a PFUser is signed up.
-- (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
-    [self dismissViewControllerAnimated:YES completion:NULL]; // Dismiss the PFSignUpViewController
-}
- 
-// Sent to the delegate when the sign up attempt fails.
-- (void)signUpViewController:(PFSignUpViewController *)signUpController didFailToSignUpWithError:(NSError *)error {
-    NSLog(@"Failed to sign up...");
-}
- 
-// Sent to the delegate when the sign up screen is dismissed.
-- (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController {
-    NSLog(@"User dismissed the signUpViewController");
-}
 
 - (IBAction)onAddAccountButtonPressed:(id)sender {
 }
@@ -116,5 +72,24 @@
 }
 
 - (IBAction)onSignInButtonPressed:(id)sender {
+    
+    NSString *user = usernameTextField.text;
+    NSString *password = passwordTextField.text;
+    
+    if ([user length] < 2 || [password length] < 4) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Entry" message:@"Username and Password must both be at least 4 characters long." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+        [alert show];
+    } else {
+        [PFUser logInWithUsernameInBackground:user password:password block:^(PFUser *user, NSError *error) {
+            if (user) {
+                [self performSegueWithIdentifier:@"SegueToCurrentUserProfile" sender:self];
+            } else {
+                NSLog(@"%@",error);
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login Failed." message:@"Invalid Username and/or Password." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+                [alert show];
+            }
+        }];
+    }
+
 }
 @end
