@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B7FDB6A11817060400F434CE /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7FDB6A01817060400F434CE /* Storyboard.storyboard */; };
 		B7FDB6A71817083000F434CE /* NewAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FDB6A61817083000F434CE /* NewAccountViewController.m */; };
-		C2A56F3418182D7D00933520 /* ParseLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A56F3318182D7D00933520 /* ParseLoginViewController.m */; };
+		C28466BA18187A3600320DB0 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28466B918187A3600320DB0 /* UserProfileViewController.m */; };
 		C2A56F361818311100933520 /* RememberMeLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A56F351818311100933520 /* RememberMeLogo.png */; };
 		C2BA79511816DFFD00F25769 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA79501816DFFD00F25769 /* Foundation.framework */; };
 		C2BA79531816DFFD00F25769 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA79521816DFFD00F25769 /* CoreGraphics.framework */; };
@@ -54,8 +54,8 @@
 		B7FDB6A01817060400F434CE /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = ../Storyboard.storyboard; sourceTree = "<group>"; };
 		B7FDB6A51817083000F434CE /* NewAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewAccountViewController.h; path = ../NewAccountViewController.h; sourceTree = "<group>"; };
 		B7FDB6A61817083000F434CE /* NewAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewAccountViewController.m; path = ../NewAccountViewController.m; sourceTree = "<group>"; };
-		C2A56F3218182D7D00933520 /* ParseLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLoginViewController.h; sourceTree = "<group>"; };
-		C2A56F3318182D7D00933520 /* ParseLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLoginViewController.m; sourceTree = "<group>"; };
+		C28466B818187A3600320DB0 /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserProfileViewController.h; path = ../UserProfileViewController.h; sourceTree = "<group>"; };
+		C28466B918187A3600320DB0 /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserProfileViewController.m; path = ../UserProfileViewController.m; sourceTree = "<group>"; };
 		C2A56F351818311100933520 /* RememberMeLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RememberMeLogo.png; sourceTree = "<group>"; };
 		C2BA794D1816DFFD00F25769 /* RememberMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RememberMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2BA79501816DFFD00F25769 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -173,9 +173,9 @@
 				C2ED035218171BB2007E1F38 /* Pictures */,
 				C2BA79621816DFFD00F25769 /* AppDelegate.m */,
 				C2BA79611816DFFD00F25769 /* AppDelegate.h */,
+				C28466B818187A3600320DB0 /* UserProfileViewController.h */,
+				C28466B918187A3600320DB0 /* UserProfileViewController.m */,
 				B7FDB6A01817060400F434CE /* Storyboard.storyboard */,
-				C2A56F3218182D7D00933520 /* ParseLoginViewController.h */,
-				C2A56F3318182D7D00933520 /* ParseLoginViewController.m */,
 				C2ED035318171C91007E1F38 /* LogInViewController.h */,
 				C2ED035418171C91007E1F38 /* LogInViewController.m */,
 				B7FDB6A51817083000F434CE /* NewAccountViewController.h */,
@@ -323,11 +323,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2A56F3418182D7D00933520 /* ParseLoginViewController.m in Sources */,
 				C2BA79631816DFFD00F25769 /* AppDelegate.m in Sources */,
 				C2BA795F1816DFFD00F25769 /* main.m in Sources */,
 				C2ED035518171C91007E1F38 /* LogInViewController.m in Sources */,
 				C2BA79661816DFFD00F25769 /* RememberMe.xcdatamodeld in Sources */,
+				C28466BA18187A3600320DB0 /* UserProfileViewController.m in Sources */,
 				B7FDB6A71817083000F434CE /* NewAccountViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

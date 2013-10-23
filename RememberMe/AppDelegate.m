@@ -23,6 +23,11 @@
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    PFUser *user = [PFUser currentUser];
+    [user refreshInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        
+    }];
+    
     NSLog(@"H@LLO");
     
     return YES;
