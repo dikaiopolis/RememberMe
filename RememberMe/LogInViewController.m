@@ -26,7 +26,10 @@
 - (void)checkStatus {
 
 //Checks to see if there is a user logged in and if there is performsSegue to that users homepage
+
     if ([PFUser currentUser]) {
+    
+    NSLog(@"%@", [PFUser currentUser]);
         [self performSegueWithIdentifier:@"SegueToCurrentUserProfile" sender:self];
     }
 }
@@ -77,7 +80,7 @@
     NSString *password = passwordTextField.text;
     
     if ([user length] < 2 || [password length] < 4) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Entry" message:@"Username and Password must both be at least 4 characters long." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Entry" message:@"Make sure you fill out all of the information!" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
         [alert show];
     } else {
         [PFUser logInWithUsernameInBackground:user password:password block:^(PFUser *user, NSError *error) {
