@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LogInViewController.h"
 
 @implementation AppDelegate
 
@@ -22,13 +23,10 @@
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-
-    
-/// The following is a test to see if Parse is saving.  Delete once you start getting the app working.
-//    
-//PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-//[testObject setObject:@"bar" forKey:@"foo"];
-//[testObject save];
+    PFUser *user = [PFUser currentUser];
+    [user refreshInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        
+    }];
     
     return YES;
 }
