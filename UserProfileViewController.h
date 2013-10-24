@@ -10,4 +10,13 @@
 
 @interface UserProfileViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *companyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *jobTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneNumberLabel;
+
+- (IBAction)onLogoutButtonPressed:(id)sender;
+
+
 @end

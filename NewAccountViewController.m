@@ -12,8 +12,9 @@
 
 @end
 
+
 @implementation NewAccountViewController
-@synthesize fullName,userName,passWord,email,company;
+@synthesize fullNameTextField,userNameTextField,passwordTextField,emailTextField,companyTextField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,19 +25,37 @@
     return self;
 }
 
-- (void)viewDidLoad
+-(void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    fullNameTextField.text = @"";
+    userNameTextField.text= @"";
+    passwordTextField.text = @"";
+    emailTextField.text = @"";
+    companyTextField.text= @"";
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)myMethod {
+    PFUser *user = [PFUser user];
+    user.username = @"";
+    user.password = @"";
+    user.email = @"";
+    user[@"Company"] = @"";
+    user[@"Full Name"]= @"";
 }
+
+
+- (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+
 
 
 - (IBAction)pushToParse:(id)sender {
+       
+    
 }
+
 @end
