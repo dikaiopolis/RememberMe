@@ -42,20 +42,19 @@
 #pragma tableVIew
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
                       object:(PFObject *)object{
-    static NSDateFormatter *dateFormatter = nil;
-    if (dateFormatter == nil) {
-        dateFormatter = [[NSDateFormatter alloc] init];
-        dateFormatter.numberStyle = NSNumberFormatterDecimalStyle;
-        dateFormatter.maximumFractionDigits = 3;
+    static NSNumberFormatter *numberFormatter = nil;
+    if (numberFormatter == nil) {
+        numberFormatter = [[NSNumberFormatter alloc] init];
+        numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
+        numberFormatter.maximumFractionDigits = 3;
         }
     PFTableViewCell *cell = (PFTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"LocationCell"];
     //configure cell
     PFGeoPoint *geoPoint = object[@"location"];
     
-    cell.textLabel.text = [dateFormatter stringFromDate:object.updatedAt];
+    cell.textLabel.text = [numberFormatter stringFromNumber:object.updatedAt];
     NSString *string = [NSString stringWithFormat:@"%@, %@",
-                       [numberFormatter stringFromNumber:[NSNumber numberWithDouble:geoPoint.latitude]]
-                        [numberFormatter stringFromNumber:[NSNumber numberWithDouble:geoPoint.longitude]]]
+                       [numberFormatter stringFromNumber:[NSNumber numberWithDouble:geoPoint.latitude]], [numberFormatter stringFromNumber:[NSNumber numberWithDouble:geoPoint.longitude]]];
     
     cell.detailTextLabel.text = string;
     
