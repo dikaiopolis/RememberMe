@@ -14,48 +14,42 @@
 
 
 @implementation NewAccountViewController
-@synthesize fullNameTextField,userNameTextField,passwordTextField,emailTextField,companyTextField;
+@synthesize fullNameTextField,userNameTextField,passwordTextField,emailTextField,companyTextField, phoneNumberTextField, jobTitleTextField;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+- (void)myMethod {
+    PFUser *user = [PFUser user];
+    user.username = userNameTextField.text;
+    user.password = passwordTextField.text;
+    user.email = emailTextField.text;
+    user[@"phoneNumber"] = phoneNumberTextField.text;
+    user[@"company"] = companyTextField.text;
+    user[@"jobTitle"] = jobTitleTextField.text;
+    user[@"realName"] = fullNameTextField.text;
+//    
+//    UIImage *picture = [UIImage imageNamed:@"Marcel_Claude_headshot.jpg"];
+//    user[@"picture"] = picture;
+    
+
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+      if (!error) {
+        [self performSegueWithIdentifier:@"NewAccountCreatedSegue" sender:self];
+        } else {
+          NSString *errorString = [error userInfo][@"error"];
+          // Show the errorString somewhere and let the user try again.
+      }
+    }];
 }
+
 
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    fullNameTextField.text = @"";
-    userNameTextField.text= @"";
-    passwordTextField.text = @"";
-    emailTextField.text = @"";
-    companyTextField.text= @"";
-}
 
-- (void)myMethod {
-    PFUser *user = [PFUser user];
-    user.username = @"";
-    user.password = @"";
-    user.email = @"";
-    user[@"Company"] = @"";
-    user[@"Full Name"]= @"";
-}
-
-
-- (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
-    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 
 
-
-- (IBAction)pushToParse:(id)sender {
-       
-    
+- (IBAction)onCreateAccountButtonPressed:(id)sender {
+[self myMethod];
 }
-
 @end

@@ -19,6 +19,10 @@
 - (IBAction)onLinkedInButtonPressed:(id)sender;
 - (IBAction)onSignInButtonPressed:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *forgotPasswordButton;
+- (IBAction)onForgotPasswordButtonPressed:(id)sender;
+
+
 -(void)checkStatus;
 
 @end

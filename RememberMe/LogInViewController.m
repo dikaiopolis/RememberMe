@@ -13,14 +13,20 @@
 @end
 
 @implementation LogInViewController
-@synthesize usernameTextField, passwordTextField;
+@synthesize usernameTextField, passwordTextField, forgotPasswordButton;
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    [forgotPasswordButton setTransform:CGAffineTransformMakeRotation (-M_PI / 2)];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [self checkStatus];
+}
+
+- (IBAction)onForgotPasswordButtonPressed:(id)sender {
+
 }
 
 - (void)checkStatus {

@@ -7,7 +7,6 @@
 //
 
 #import "UserProfileViewController.h"
-#import <Parse/Parse.h>
 
 @interface UserProfileViewController ()
 
@@ -26,8 +25,7 @@
     jobTitleLabel.text = [[PFUser currentUser] objectForKey:@"jobTitle"];
     emailLabel.text = [[PFUser currentUser] objectForKey:@"email"];
     phoneNumberLabel.text = [[PFUser currentUser] objectForKey:@"phoneNumber"];
-    
-    
+//    pictureView.image = [[PFUser currentUser] objectForKey:@"picture"];
     
 }
 

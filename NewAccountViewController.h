@@ -20,10 +20,12 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *companyTextField;
 
-@property (weak,nonatomic) PFUser *company;
+@property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextField;
 
-//@property (nonatomic, retain) NSString *company;
-- (IBAction)pushToParse:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *jobTitleTextField;
+
+- (IBAction)onCreateAccountButtonPressed:(id)sender;
+
 
 
 @end
