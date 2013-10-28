@@ -20,7 +20,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    nameLabel.text = [[PFUser currentUser] objectForKey:@"username"];
+    nameLabel.text = [[PFUser currentUser] objectForKey:@"name"];
     companyLabel.text = [[PFUser currentUser] objectForKey:@"company"];
     jobTitleLabel.text = [[PFUser currentUser] objectForKey:@"jobTitle"];
     emailLabel.text = [[PFUser currentUser] objectForKey:@"email"];

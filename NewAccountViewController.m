@@ -21,6 +21,7 @@
     user.username = userNameTextField.text;
     user.password = passwordTextField.text;
     user.email = emailTextField.text;
+    user[@"name"] = fullNameTextField.text;
     user[@"phoneNumber"] = phoneNumberTextField.text;
     user[@"company"] = companyTextField.text;
     user[@"jobTitle"] = jobTitleTextField.text;

@@ -7,32 +7,43 @@
 //
 
 #import "EditProfileViewController.h"
+#import <Parse/Parse.h>
 
 @interface EditProfileViewController ()
 
 @end
 
 @implementation EditProfileViewController
+@synthesize nameTextField, companyTextField, jobTitleTextField, emailTextField, phoneNumberTextField;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
-- (void)viewDidLoad
+-(void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    nameTextField.text = [[PFUser currentUser] objectForKey:@"name"];
+    companyTextField.text = [[PFUser currentUser] objectForKey:@"company"];
+    jobTitleTextField.text = [[PFUser currentUser] objectForKey:@"jobTitle"];
+    emailTextField.text = [[PFUser currentUser] objectForKey:@"email"];
+    phoneNumberTextField.text = [[PFUser currentUser] objectForKey:@"phoneNumber"];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)onSaveButtonPressed:(id)sender {
+
+    [[PFUser currentUser] setEmail:emailTextField.text];
+    [PFUser currentUser][@"phoneNumber"] = phoneNumberTextField.text;
+    [PFUser currentUser][@"company"] = companyTextField.text;
+    [PFUser currentUser][@"jobTitle"] = jobTitleTextField.text;
+    [PFUser currentUser][@"realName"] = nameTextField.text;
+    [[PFUser currentUser] saveInBackground];
+    [self performSegueWithIdentifier:@"SegueFromEditVCtoUserProfileVC" sender:self];
+
 }
 
 @end
