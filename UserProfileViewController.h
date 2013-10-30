@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *phoneNumberLabel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) NSMutableData *imageData;
 
 @property UIImagePickerController *picker;
 

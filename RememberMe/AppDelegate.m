@@ -31,6 +31,8 @@
         
     }];
     
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor blueColor]];
     return YES;
 }
 

@@ -14,11 +14,27 @@
 @end
 
 @implementation LogInViewController
-@synthesize usernameTextField, passwordTextField, forgotPasswordButton;
+@synthesize usernameTextField, passwordTextField, forgotPasswordButton, loginButton, addAccountButton, facebookLoginButton;
 
 -(void)viewDidLoad {
     [super viewDidLoad];
     [forgotPasswordButton setTransform:CGAffineTransformMakeRotation (-M_PI / 2)];
+     forgotPasswordButton.layer.cornerRadius = 10; // this value vary as per your desire
+    forgotPasswordButton.clipsToBounds = YES;
+    loginButton.layer.cornerRadius = 10;
+    loginButton.clipsToBounds = YES;
+    
+    addAccountButton.layer.cornerRadius = 10;
+    addAccountButton.clipsToBounds = YES;
+    
+    facebookLoginButton.layer.cornerRadius = 10;
+    facebookLoginButton.clipsToBounds = YES;
+
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:73 green:58 blue:68 alpha:0];
+    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+
+
 
 }
 
@@ -32,7 +48,7 @@
 
 - (IBAction)onFBLoginButtonPressed:(id)sender {
     // Set permissions required from the facebook user account
-    NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location"];
+    NSArray *permissionsArray = @[ @"basic_info", @"user_about_me", @"user_work_history", @"email"];
     
     // Login PFUser using facebook
     [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {

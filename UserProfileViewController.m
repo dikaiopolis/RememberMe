@@ -10,19 +10,66 @@
 #import <FacebookSDK/FacebookSDK.h>
 
 @implementation UserProfileViewController
-@synthesize nameLabel, companyLabel, jobTitleLabel, emailLabel, phoneNumberLabel, picker, imageView;
+@synthesize nameLabel, companyLabel, jobTitleLabel, emailLabel, phoneNumberLabel, picker, imageView, imageData;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    //
+    //    nameLabel.text = [[PFUser currentUser] objectForKey:@"name"];
+       companyLabel.text = [[PFUser currentUser] objectForKey:@"company"];
+       jobTitleLabel.text = [[PFUser currentUser] objectForKey:@"jobTitle"];
+       emailLabel.text = [[PFUser currentUser] objectForKey:@"email"];
+       phoneNumberLabel.text = [[PFUser currentUser] objectForKey:@"phoneNumber"];
     
-    nameLabel.text = [[PFUser currentUser] objectForKey:@"name"];
-    companyLabel.text = [[PFUser currentUser] objectForKey:@"company"];
-    jobTitleLabel.text = [[PFUser currentUser] objectForKey:@"jobTitle"];
-    emailLabel.text = [[PFUser currentUser] objectForKey:@"email"];
-    phoneNumberLabel.text = [[PFUser currentUser] objectForKey:@"phoneNumber"];
- }
+    // ...
+    // Create request for user's Facebook data
+    FBRequest *request = [FBRequest requestForMe];
+    
+    // Send request to Facebook
+    [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        if (!error) {
+            // result is a dictionary with the user's Facebook data
+            NSDictionary *userData = (NSDictionary *)result;
+            
+            NSString *facebookID = userData[@"id"];
+            NSString *name = userData[@"name"];
+            NSString *location = userData[@"location"][@"name"];
+            NSString *gender = userData[@"gender"];
+            NSString *birthday = userData[@"birthday"];
+            NSString *relationship = userData[@"relationship_status"];
+            
+            // Download the user's facebook profile picture
+            imageData = [[NSMutableData alloc] init]; // the data will be loaded in here
+            
+            // URL should point to https://graph.facebook.com/{facebookId}/picture?type=large&return_ssl_resources=1
+            NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
+            
+            NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:pictureURL
+                                                                      cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                                  timeoutInterval:2.0f];
+            // Run network request asynchronously
+            NSURLConnection *urlConnection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
+            
+            
+            // Now add the data to the UI elements
+            nameLabel.text = name;
+            
+        }
+    }];
+}
+
+// Called every time a chunk of the data is received
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [imageData appendData:data]; // Build the image
+}
+ 
+// Called when the entire image is finished downloading
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    // Set the image in the header imageView
+    imageView.image = [UIImage imageWithData:imageData];
+}
 
 //Adds a new photo from the phone's gallery or from the camera
 - (IBAction)onAddPhotoButtonPressed:(id)sender {
@@ -57,7 +104,7 @@
     PFFile *imageFile = [PFFile fileWithName:@"Image.jpg" data:imageData];
     [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
-        
+            
             PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
             [userPhoto setObject:imageFile forKey:@"picture"];
             userPhoto.ACL = [PFACL ACLWithUser:[PFUser currentUser]];

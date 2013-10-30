@@ -48,6 +48,7 @@
 		C2BA7996181702CA00F25769 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA7995181702CA00F25769 /* StoreKit.framework */; };
 		C2BA7998181702D100F25769 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA7997181702D100F25769 /* SystemConfiguration.framework */; };
 		C2BA799A181719D000F25769 /* linkedInLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C2BA7999181719D000F25769 /* linkedInLogo.png */; };
+		C2BD3ADC182160E2006635A8 /* amidst_the_fog_by_thevictor2225-d6oki88.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2BD3ADB182160E2006635A8 /* amidst_the_fog_by_thevictor2225-d6oki88.jpg */; };
 		C2ED035518171C91007E1F38 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ED035418171C91007E1F38 /* LogInViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,7 @@
 		C2BA7995181702CA00F25769 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C2BA7997181702D100F25769 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C2BA7999181719D000F25769 /* linkedInLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkedInLogo.png; sourceTree = "<group>"; };
+		C2BD3ADB182160E2006635A8 /* amidst_the_fog_by_thevictor2225-d6oki88.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "amidst_the_fog_by_thevictor2225-d6oki88.jpg"; sourceTree = "<group>"; };
 		C2ED035318171C91007E1F38 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		C2ED035418171C91007E1F38 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -269,6 +271,7 @@
 		C2ED035218171BB2007E1F38 /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				C2BD3ADB182160E2006635A8 /* amidst_the_fog_by_thevictor2225-d6oki88.jpg */,
 				C20B22491819E18800A73668 /* Marcel_Claude_headshot.jpg */,
 				C2A56F351818311100933520 /* RememberMeLogo.png */,
 				C2BA7999181719D000F25769 /* linkedInLogo.png */,
@@ -351,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2BD3ADC182160E2006635A8 /* amidst_the_fog_by_thevictor2225-d6oki88.jpg in Resources */,
 				C2A56F361818311100933520 /* RememberMeLogo.png in Resources */,
 				C20B224A1819E18800A73668 /* Marcel_Claude_headshot.jpg in Resources */,
 				C2BA795D1816DFFD00F25769 /* InfoPlist.strings in Resources */,
