@@ -12,7 +12,7 @@
 @interface SearchGeoViewController : UIViewController<MKMapViewDelegate>
 
 
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
 
 - (void)setInitialLocation:(CLLocation *)aLocation;
 

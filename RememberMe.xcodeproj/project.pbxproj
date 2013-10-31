@@ -10,7 +10,13 @@
 		B7FDB6A11817060400F434CE /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7FDB6A01817060400F434CE /* Storyboard.storyboard */; };
 		B7FDB6A71817083000F434CE /* NewAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FDB6A61817083000F434CE /* NewAccountViewController.m */; };
 		C20B224A1819E18800A73668 /* Marcel_Claude_headshot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C20B22491819E18800A73668 /* Marcel_Claude_headshot.jpg */; };
+		C210716C18229446002A54A3 /* PersonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C210716B18229446002A54A3 /* PersonDetailViewController.m */; };
+		C210716F18229B44002A54A3 /* SavedUserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C210716E18229B44002A54A3 /* SavedUserDetailViewController.m */; };
+		C22BED571821A30C00870FCF /* PAWSearchRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = C22BED561821A30C00870FCF /* PAWSearchRadius.m */; };
+		C22BED5B1821A33600870FCF /* PAWCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = C22BED5A1821A33600870FCF /* PAWCircleView.m */; };
 		C23B07811820104900CC4051 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23B07801820104900CC4051 /* FacebookSDK.framework */; };
+		C248C97B18228CEC00E9F128 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C248C97A18228CEC00E9F128 /* Person.m */; };
+		C248C97D18228D5300E9F128 /* Nichole-Galicia-Headshot.png in Resources */ = {isa = PBXBuildFile; fileRef = C248C97C18228D5300E9F128 /* Nichole-Galicia-Headshot.png */; };
 		C2540A6E1819A35E0048EF22 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2540A6D1819A35E0048EF22 /* EditProfileViewController.m */; };
 		C2540A721819A3BF0048EF22 /* SearchGeoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2540A6F1819A3BF0048EF22 /* SearchGeoViewController.m */; };
 		C2540A731819A3BF0048EF22 /* WhoIsNearMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2540A711819A3BF0048EF22 /* WhoIsNearMeViewController.m */; };
@@ -49,6 +55,7 @@
 		C2BA7998181702D100F25769 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA7997181702D100F25769 /* SystemConfiguration.framework */; };
 		C2BA799A181719D000F25769 /* linkedInLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C2BA7999181719D000F25769 /* linkedInLogo.png */; };
 		C2BD3ADC182160E2006635A8 /* amidst_the_fog_by_thevictor2225-d6oki88.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2BD3ADB182160E2006635A8 /* amidst_the_fog_by_thevictor2225-d6oki88.jpg */; };
+		C2D554771821EFB0005EE5A3 /* PAWPost.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D554761821EFB0005EE5A3 /* PAWPost.m */; };
 		C2ED035518171C91007E1F38 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ED035418171C91007E1F38 /* LogInViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +74,18 @@
 		B7FDB6A51817083000F434CE /* NewAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewAccountViewController.h; path = ../NewAccountViewController.h; sourceTree = "<group>"; };
 		B7FDB6A61817083000F434CE /* NewAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewAccountViewController.m; path = ../NewAccountViewController.m; sourceTree = "<group>"; };
 		C20B22491819E18800A73668 /* Marcel_Claude_headshot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Marcel_Claude_headshot.jpg; sourceTree = "<group>"; };
+		C210716A18229446002A54A3 /* PersonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDetailViewController.h; sourceTree = "<group>"; };
+		C210716B18229446002A54A3 /* PersonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDetailViewController.m; sourceTree = "<group>"; };
+		C210716D18229B44002A54A3 /* SavedUserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedUserDetailViewController.h; sourceTree = "<group>"; };
+		C210716E18229B44002A54A3 /* SavedUserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedUserDetailViewController.m; sourceTree = "<group>"; };
+		C22BED551821A30C00870FCF /* PAWSearchRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAWSearchRadius.h; sourceTree = "<group>"; };
+		C22BED561821A30C00870FCF /* PAWSearchRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAWSearchRadius.m; sourceTree = "<group>"; };
+		C22BED591821A33600870FCF /* PAWCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAWCircleView.h; sourceTree = "<group>"; };
+		C22BED5A1821A33600870FCF /* PAWCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAWCircleView.m; sourceTree = "<group>"; };
 		C23B07801820104900CC4051 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		C248C97918228CEC00E9F128 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		C248C97A18228CEC00E9F128 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		C248C97C18228D5300E9F128 /* Nichole-Galicia-Headshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nichole-Galicia-Headshot.png"; sourceTree = "<group>"; };
 		C2540A6C1819A35E0048EF22 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
 		C2540A6D1819A35E0048EF22 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
 		C2540A6F1819A3BF0048EF22 /* SearchGeoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchGeoViewController.m; sourceTree = "<group>"; };
@@ -118,6 +136,8 @@
 		C2BA7997181702D100F25769 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C2BA7999181719D000F25769 /* linkedInLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkedInLogo.png; sourceTree = "<group>"; };
 		C2BD3ADB182160E2006635A8 /* amidst_the_fog_by_thevictor2225-d6oki88.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "amidst_the_fog_by_thevictor2225-d6oki88.jpg"; sourceTree = "<group>"; };
+		C2D554751821EFB0005EE5A3 /* PAWPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAWPost.h; sourceTree = "<group>"; };
+		C2D554761821EFB0005EE5A3 /* PAWPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAWPost.m; sourceTree = "<group>"; };
 		C2ED035318171C91007E1F38 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		C2ED035418171C91007E1F38 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +180,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C22BED581821A31500870FCF /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				C2D554751821EFB0005EE5A3 /* PAWPost.h */,
+				C2D554761821EFB0005EE5A3 /* PAWPost.m */,
+				C22BED591821A33600870FCF /* PAWCircleView.h */,
+				C22BED5A1821A33600870FCF /* PAWCircleView.m */,
+				C22BED551821A30C00870FCF /* PAWSearchRadius.h */,
+				C22BED561821A30C00870FCF /* PAWSearchRadius.m */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		C2BA79441816DFFD00F25769 = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +245,10 @@
 				B7FDB6A01817060400F434CE /* Storyboard.storyboard */,
 				C28466B818187A3600320DB0 /* UserProfileViewController.h */,
 				C28466B918187A3600320DB0 /* UserProfileViewController.m */,
+				C210716A18229446002A54A3 /* PersonDetailViewController.h */,
+				C210716B18229446002A54A3 /* PersonDetailViewController.m */,
+				C210716D18229B44002A54A3 /* SavedUserDetailViewController.h */,
+				C210716E18229B44002A54A3 /* SavedUserDetailViewController.m */,
 				C2ED035318171C91007E1F38 /* LogInViewController.h */,
 				C2ED035418171C91007E1F38 /* LogInViewController.m */,
 				B7FDB6A51817083000F434CE /* NewAccountViewController.h */,
@@ -230,10 +267,13 @@
 				C2540A761819A3D50048EF22 /* SearchGeoViewController.h */,
 				C2540A741819A3D50048EF22 /* SavedUsersViewController.h */,
 				C2540A751819A3D50048EF22 /* SavedUsersViewController.m */,
+				C248C97918228CEC00E9F128 /* Person.h */,
+				C248C97A18228CEC00E9F128 /* Person.m */,
 				C2540A701819A3BF0048EF22 /* WhoIsNearMeViewController.h */,
 				C2540A711819A3BF0048EF22 /* WhoIsNearMeViewController.m */,
 				C2BA79671816DFFD00F25769 /* Images.xcassets */,
 				C2BA79641816DFFD00F25769 /* RememberMe.xcdatamodeld */,
+				C22BED581821A31500870FCF /* New Group */,
 				C2BA79591816DFFD00F25769 /* Supporting Files */,
 			);
 			path = RememberMe;
@@ -273,6 +313,7 @@
 			children = (
 				C2BD3ADB182160E2006635A8 /* amidst_the_fog_by_thevictor2225-d6oki88.jpg */,
 				C20B22491819E18800A73668 /* Marcel_Claude_headshot.jpg */,
+				C248C97C18228D5300E9F128 /* Nichole-Galicia-Headshot.png */,
 				C2A56F351818311100933520 /* RememberMeLogo.png */,
 				C2BA7999181719D000F25769 /* linkedInLogo.png */,
 			);
@@ -359,6 +400,7 @@
 				C20B224A1819E18800A73668 /* Marcel_Claude_headshot.jpg in Resources */,
 				C2BA795D1816DFFD00F25769 /* InfoPlist.strings in Resources */,
 				C2BA79681816DFFD00F25769 /* Images.xcassets in Resources */,
+				C248C97D18228D5300E9F128 /* Nichole-Galicia-Headshot.png in Resources */,
 				C2BA799A181719D000F25769 /* linkedInLogo.png in Resources */,
 				B7FDB6A11817060400F434CE /* Storyboard.storyboard in Resources */,
 			);
@@ -383,16 +425,22 @@
 				C2540A731819A3BF0048EF22 /* WhoIsNearMeViewController.m in Sources */,
 				C2540A7C1819A3FD0048EF22 /* GeoPointAnnotation.m in Sources */,
 				C2BA795F1816DFFD00F25769 /* main.m in Sources */,
+				C22BED571821A30C00870FCF /* PAWSearchRadius.m in Sources */,
 				C2540A6E1819A35E0048EF22 /* EditProfileViewController.m in Sources */,
+				C248C97B18228CEC00E9F128 /* Person.m in Sources */,
+				C2D554771821EFB0005EE5A3 /* PAWPost.m in Sources */,
 				C2ED035518171C91007E1F38 /* LogInViewController.m in Sources */,
 				C2540A881819A7C80048EF22 /* GeoQueryAnnotaion.m in Sources */,
+				C210716F18229B44002A54A3 /* SavedUserDetailViewController.m in Sources */,
 				C29F95CE181DCC3500140BDB /* ResetPasswordViewController.m in Sources */,
 				C2540A7D1819A3FD0048EF22 /* MasterGeoViewController.m in Sources */,
 				C2540A721819A3BF0048EF22 /* SearchGeoViewController.m in Sources */,
 				C2BA79661816DFFD00F25769 /* RememberMe.xcdatamodeld in Sources */,
+				C210716C18229446002A54A3 /* PersonDetailViewController.m in Sources */,
 				C28466BA18187A3600320DB0 /* UserProfileViewController.m in Sources */,
 				B7FDB6A71817083000F434CE /* NewAccountViewController.m in Sources */,
 				C2540A771819A3D50048EF22 /* SavedUsersViewController.m in Sources */,
+				C22BED5B1821A33600870FCF /* PAWCircleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

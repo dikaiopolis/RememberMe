@@ -35,4 +35,35 @@
     // Dispose of any resources that can be recreated.
 }
 
+ -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+       
+    NSString *cellIdentifier = @"Person";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if(!cell){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    }
+    
+    cell.textLabel.text = @"John";
+    
+    cell.imageView.image = [UIImage imageNamed:@"Marcel_Claude_headshot.jpg"];
+
+    return cell;
+
+
+ }
+
+
+
+ -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+ {
+   return 1;
+ }
+
+ -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ [self performSegueWithIdentifier:@"SegueToSavedUserDetailVC" sender:self];
+ }
+
 @end

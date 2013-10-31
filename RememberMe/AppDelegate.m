@@ -6,6 +6,10 @@
 //  Copyright (c) 2013 Daniel Baldwin & Ibrahim Ayad. All rights reserved.
 //
 
+static NSString * const defaultsFilterDistanceKey = @"filterDistance";
+static NSString * const defaultsLocationKey = @"currentLocation";
+
+
 #import "AppDelegate.h"
 #import "LogInViewController.h"
 
@@ -14,6 +18,8 @@
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+@synthesize filterDistance;
+@synthesize currentLocation;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -31,10 +37,49 @@
         
     }];
     
+    	// Grab values from NSUserDefaults:
+	NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+
+	// Desired search radius:
+	if ([userDefaults doubleForKey:defaultsFilterDistanceKey]) {
+		// use the ivar instead of self.accuracy to avoid an unnecessary write to NAND on launch.
+		filterDistance = [userDefaults doubleForKey:defaultsFilterDistanceKey];
+	} else {
+		// if we have no accuracy in defaults, set it to 1000 feet.
+		self.filterDistance = 1000 * kPAWFeetToMeters;
+	}
+
+    
     
     [[UINavigationBar appearance] setTintColor:[UIColor blueColor]];
     return YES;
 }
+
+
+- (void)setFilterDistance:(CLLocationAccuracy)aFilterDistance {
+	filterDistance = aFilterDistance;
+
+	NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+	[userDefaults setDouble:filterDistance forKey:defaultsFilterDistanceKey];
+	[userDefaults synchronize];
+
+	// Notify the app of the filterDistance change:
+	NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithDouble:filterDistance] forKey:kPAWFilterDistanceKey];
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[[NSNotificationCenter defaultCenter] postNotificationName:kPAWFilterDistanceChangeNotification object:nil userInfo:userInfo];
+	});
+}
+
+- (void)setCurrentLocation:(CLLocation *)aCurrentLocation {
+	currentLocation = aCurrentLocation;
+
+	// Notify the app of the location change:
+	NSDictionary *userInfo = [NSDictionary dictionaryWithObject:currentLocation forKey:kPAWLocationKey];
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[[NSNotificationCenter defaultCenter] postNotificationName:kPAWLocationChangeNotification object:nil userInfo:userInfo];
+	});
+}
+
 
 
 //Method that supports the Single-Sign On feature of the Facebook 

@@ -7,7 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <Parse/Parse.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface WhoIsNearMeViewController : UIViewController
+
+
+@interface WhoIsNearMeViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic) MKCoordinateSpan span;
+
+// CLLocationManagerDelegate methods:
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation;
+
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error;
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+- (IBAction)onButtonPressed:(id)sender;
+
+- (IBAction)onRefreshButtonPressed:(id)sender;
 
 @end
+
