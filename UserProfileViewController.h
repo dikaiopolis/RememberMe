@@ -8,25 +8,30 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
+#import "ImageCell.h"
+#import "Person.h"
 
-@interface UserProfileViewController : UIViewController <UIImagePickerControllerDelegate>
+@interface UserProfileViewController : UIViewController < CLLocationManagerDelegate,MKMapViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *companyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *jobTitleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
-@property (weak, nonatomic) IBOutlet UILabel *phoneNumberLabel;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) NSMutableData *imageData;
+@property (strong, nonatomic) NSMutableArray *usersArray;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) Person *personToPass;
+@property (strong, nonatomic) NSIndexPath *cellIndexPath;
 
 @property UIImagePickerController *picker;
 
-
-- (IBAction)onAddPhotoButtonPressed:(id)sender;
-
+- (IBAction)onRefreshButtonPressed:(id)sender;
 
 - (IBAction)onLogoutButtonPressed:(id)sender;
 

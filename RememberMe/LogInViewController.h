@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface LogInViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+@interface LogInViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *facebookLoginButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *addAccountButton;
+@property (weak, nonatomic) IBOutlet UIImageView *splashScreenImageView;
 
 - (IBAction)onAddAccountButtonPressed:(id)sender;
 - (IBAction)onSignInButtonPressed:(id)sender;

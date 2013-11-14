@@ -14,9 +14,12 @@
 @end
 
 @implementation LogInViewController
-@synthesize usernameTextField, passwordTextField, forgotPasswordButton, loginButton, addAccountButton, facebookLoginButton;
+@synthesize usernameTextField, passwordTextField, forgotPasswordButton, loginButton, addAccountButton, facebookLoginButton, splashScreenImageView;
 
 -(void)viewDidLoad {
+
+[[UIApplication sharedApplication] setStatusBarHidden:NO];
+
     [super viewDidLoad];
     [forgotPasswordButton setTransform:CGAffineTransformMakeRotation (-M_PI / 2)];
      forgotPasswordButton.layer.cornerRadius = 10; // this value vary as per your desire
@@ -29,17 +32,33 @@
     
     facebookLoginButton.layer.cornerRadius = 10;
     facebookLoginButton.clipsToBounds = YES;
-
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:73 green:58 blue:68 alpha:0];
+    usernameTextField.delegate = self;
+    passwordTextField.delegate = self;
     
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+
+// Change the frame size to suit yours //
 
 
 
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES];   //it hides  
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:NO];    // it shows
+}
+
+
 - (void)viewDidAppear:(BOOL)animated {
     [self checkStatus];
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (IBAction)onForgotPasswordButtonPressed:(id)sender {
@@ -82,42 +101,12 @@
 
     if ([PFUser currentUser]) {
     
-    NSLog(@"%@", [PFUser currentUser]);
         [self performSegueWithIdentifier:@"SegueToCurrentUserProfile" sender:self];
+    } else {
+    splashScreenImageView.hidden = YES;
     }
 }
 
-
-#pragma mark Parse Delegate Methods
-// Sent to the delegate to determine whether the log in request should be submitted to the server.
-- (BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password {
-    // Check if both fields are completed
-    if (username && password && username.length != 0 && password.length != 0) {
-        return YES; // Begin login process
-    }
-     
-    [[[UIAlertView alloc] initWithTitle:@"Missing Information"
-                          message:@"Make sure you fill out all of the information!"
-                          delegate:nil
-                          cancelButtonTitle:@"ok"
-                          otherButtonTitles:nil] show];
-    return NO; // Interrupt login process
-}
-
-// Sent to the delegate when a PFUser is logged in.
-- (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
-    [self dismissViewControllerAnimated:YES completion:NULL];
-}
-
-// Sent to the delegate when the log in attempt fails.
-- (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error {
-    NSLog(@"Failed to log in...");
-}
- 
-// Sent to the delegate when the log in screen is dismissed.
-- (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
-    [self.navigationController popViewControllerAnimated:YES];
-}
 
 
 

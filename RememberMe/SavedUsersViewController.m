@@ -7,21 +7,17 @@
 //
 
 #import "SavedUsersViewController.h"
+#import "ImageCell.h"
+#import "SavedUserDetailViewController.h"
 
 @interface SavedUsersViewController ()
+
+@property int rowNumber;
 
 @end
 
 @implementation SavedUsersViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize savedUsersArray, personToPass, rowNumber;
 
 - (void)viewDidLoad
 {
@@ -29,41 +25,113 @@
 	// Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
+
+-(void)viewDidAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    PFQuery *query = [PFQuery queryWithClassName:@"SavedUsersArray"];
+
+
+[query whereKey:@"userSavingThis"  equalTo:[[PFUser currentUser] valueForKey:@"objectId"]];
+
+savedUsersArray = [[NSMutableArray alloc] init];
+savedUsersArray = [query findObjects].mutableCopy;
+NSLog(@"%@", savedUsersArray);
+
 }
 
- -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
- {
-       
-    NSString *cellIdentifier = @"Person";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    if(!cell){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-    }
-    
-    cell.textLabel.text = @"John";
-    
-    cell.imageView.image = [UIImage imageNamed:@"Marcel_Claude_headshot.jpg"];
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
 
+return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
+
+PFQuery *query = [PFQuery queryWithClassName:@"SavedUsersArray"];
+
+
+[query whereKey:@"userSavingThis"  equalTo:[[PFUser currentUser] valueForKey:@"objectId"]];
+
+savedUsersArray = [[NSMutableArray alloc] init];
+savedUsersArray = [query findObjects].mutableCopy;
+    return savedUsersArray.count;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+
+PFQuery *query = [PFQuery queryWithClassName:@"SavedUsersArray"];
+
+
+[query whereKey:@"userSavingThis"  equalTo:[[PFUser currentUser] valueForKey:@"objectId"]];
+
+savedUsersArray = [[NSMutableArray alloc] init];
+savedUsersArray = [query findObjects].mutableCopy;
+
+    ImageCell *cell = (ImageCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"imageCell" forIndexPath:indexPath];
+
+    PFObject *imageObject = [savedUsersArray objectAtIndex:indexPath.row];
+    PFFile *imageFile = [imageObject objectForKey:@"picture"];
+    
+    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if (!error) {
+            cell.imageView.image = [UIImage imageWithData:data];
+        }
+    }];
+    
+    NSString *userName = [[NSString alloc] init];
+    userName = [imageObject objectForKey:@"name"];
+    
+    cell.label.text = userName;
+    
     return cell;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(ImageCell *)sender
+{
+
+if ([segue.identifier isEqualToString:@"SegueToSavedUserDVC"]) {
+
+SavedUserDetailViewController *sudvc = [segue destinationViewController];
+    PFQuery *query = [PFQuery queryWithClassName:@"SavedUsersArray"];
 
 
+[query whereKey:@"userSavingThis"  equalTo:[[PFUser currentUser] valueForKey:@"objectId"]];
+
+savedUsersArray = [[NSMutableArray alloc] init];
+savedUsersArray = [query findObjects].mutableCopy;
+
+//// Limit what could be a lot of points.
+query.limit = 500;
+
+//    NSIndexPath* indexPath = [_collectionView indexPathForCell:sender];
+
+    PFObject *imageObject = [savedUsersArray objectAtIndex:rowNumber];
+    PFFile *imageFile = [imageObject objectForKey:@"picture"];
+    
+    personToPass = [[Person alloc] init];
+    
+    
+    NSData *data = [imageFile getData];
+    UIImage *image = [UIImage imageWithData:data];
+    personToPass.picture = image;
+    personToPass.name = [imageObject objectForKey:@"name"];
+    personToPass.userID = [imageObject valueForKey:@"objectId"];
+    personToPass.jobTitle = [imageObject objectForKey:@"jobTitle"];
+    personToPass.company = [imageObject objectForKey:@"company"];
+    personToPass.notes = [imageObject objectForKey:@"notes"];
+    sudvc.person = personToPass;
+    
+    NSLog(@"%@", personToPass.name);
+    
  }
+    
+}
 
 
-
- -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
- {
-   return 1;
- }
-
- -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
- {
- [self performSegueWithIdentifier:@"SegueToSavedUserDetailVC" sender:self];
- }
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    rowNumber = (int) indexPath.row;
+    [self performSegueWithIdentifier:@"SegueToSavedUserDVC" sender:self];
+}
 
 @end

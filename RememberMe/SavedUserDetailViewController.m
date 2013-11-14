@@ -9,24 +9,25 @@
 #import "SavedUserDetailViewController.h"
 
 @interface SavedUserDetailViewController ()
-
 @end
 
 @implementation SavedUserDetailViewController
+@synthesize imageView, nameLabel, jobTitleLabel, companyLabel, textView, person;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+
 
 - (void)viewDidLoad
 {
+
+NSLog(@"herename is %@", person.name);
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    nameLabel.text = person.name;
+    imageView.image = person.picture;
+    companyLabel.text = person.company;
+    jobTitleLabel.text = person.jobTitle;
+    textView.text = person.notes;
+    
 }
 
 - (void)didReceiveMemoryWarning

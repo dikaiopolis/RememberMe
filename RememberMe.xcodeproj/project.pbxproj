@@ -9,25 +9,18 @@
 /* Begin PBXBuildFile section */
 		B7FDB6A11817060400F434CE /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7FDB6A01817060400F434CE /* Storyboard.storyboard */; };
 		B7FDB6A71817083000F434CE /* NewAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FDB6A61817083000F434CE /* NewAccountViewController.m */; };
-		C20B224A1819E18800A73668 /* Marcel_Claude_headshot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C20B22491819E18800A73668 /* Marcel_Claude_headshot.jpg */; };
 		C210716C18229446002A54A3 /* PersonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C210716B18229446002A54A3 /* PersonDetailViewController.m */; };
 		C210716F18229B44002A54A3 /* SavedUserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C210716E18229B44002A54A3 /* SavedUserDetailViewController.m */; };
-		C22BED571821A30C00870FCF /* PAWSearchRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = C22BED561821A30C00870FCF /* PAWSearchRadius.m */; };
-		C22BED5B1821A33600870FCF /* PAWCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = C22BED5A1821A33600870FCF /* PAWCircleView.m */; };
 		C23B07811820104900CC4051 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23B07801820104900CC4051 /* FacebookSDK.framework */; };
-		C248C97B18228CEC00E9F128 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C248C97A18228CEC00E9F128 /* Person.m */; };
-		C248C97D18228D5300E9F128 /* Nichole-Galicia-Headshot.png in Resources */ = {isa = PBXBuildFile; fileRef = C248C97C18228D5300E9F128 /* Nichole-Galicia-Headshot.png */; };
+		C24680FD182B25740099E46D /* cityscape-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C24680FC182B25740099E46D /* cityscape-01.png */; };
+		C2468115182B32FF0099E46D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C2468108182B29300099E46D /* libz.dylib */; };
 		C2540A6E1819A35E0048EF22 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2540A6D1819A35E0048EF22 /* EditProfileViewController.m */; };
-		C2540A721819A3BF0048EF22 /* SearchGeoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2540A6F1819A3BF0048EF22 /* SearchGeoViewController.m */; };
-		C2540A731819A3BF0048EF22 /* WhoIsNearMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2540A711819A3BF0048EF22 /* WhoIsNearMeViewController.m */; };
 		C2540A771819A3D50048EF22 /* SavedUsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2540A751819A3D50048EF22 /* SavedUsersViewController.m */; };
-		C2540A7C1819A3FD0048EF22 /* GeoPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C2540A791819A3FD0048EF22 /* GeoPointAnnotation.m */; };
-		C2540A7D1819A3FD0048EF22 /* MasterGeoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2540A7B1819A3FD0048EF22 /* MasterGeoViewController.m */; };
 		C2540A851819A4A10048EF22 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2540A841819A4A10048EF22 /* MapKit.framework */; };
-		C2540A881819A7C80048EF22 /* GeoQueryAnnotaion.m in Sources */ = {isa = PBXBuildFile; fileRef = C2540A871819A7C80048EF22 /* GeoQueryAnnotaion.m */; };
+		C26407811829547A003F93D7 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C26407801829547A003F93D7 /* Person.m */; };
+		C264078718297E0F003F93D7 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C264078618297E0F003F93D7 /* ImageCell.m */; };
 		C28466BA18187A3600320DB0 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28466B918187A3600320DB0 /* UserProfileViewController.m */; };
 		C29F95CE181DCC3500140BDB /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29F95CD181DCC3500140BDB /* ResetPasswordViewController.m */; };
-		C2A56F361818311100933520 /* RememberMeLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C2A56F351818311100933520 /* RememberMeLogo.png */; };
 		C2BA79511816DFFD00F25769 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA79501816DFFD00F25769 /* Foundation.framework */; };
 		C2BA79531816DFFD00F25769 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA79521816DFFD00F25769 /* CoreGraphics.framework */; };
 		C2BA79551816DFFD00F25769 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA79541816DFFD00F25769 /* UIKit.framework */; };
@@ -53,9 +46,11 @@
 		C2BA7994181702BC00F25769 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA7993181702BC00F25769 /* Security.framework */; };
 		C2BA7996181702CA00F25769 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA7995181702CA00F25769 /* StoreKit.framework */; };
 		C2BA7998181702D100F25769 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BA7997181702D100F25769 /* SystemConfiguration.framework */; };
-		C2BA799A181719D000F25769 /* linkedInLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C2BA7999181719D000F25769 /* linkedInLogo.png */; };
-		C2BD3ADC182160E2006635A8 /* amidst_the_fog_by_thevictor2225-d6oki88.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2BD3ADB182160E2006635A8 /* amidst_the_fog_by_thevictor2225-d6oki88.jpg */; };
-		C2D554771821EFB0005EE5A3 /* PAWPost.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D554761821EFB0005EE5A3 /* PAWPost.m */; };
+		C2BC9AFE182B350B00D602B3 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BC9AFD182B350B00D602B3 /* AdSupport.framework */; };
+		C2BC9B10182B3D5300D602B3 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BC9B0A182B3D5300D602B3 /* libTestFlight.a */; };
+		C2BC9B11182B3D5300D602B3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C2BC9B0B182B3D5300D602B3 /* README.md */; };
+		C2BC9B12182B3D5300D602B3 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = C2BC9B0C182B3D5300D602B3 /* release_notes.md */; };
+		C2BC9B14182BE39400D602B3 /* cityscape-10.png in Resources */ = {isa = PBXBuildFile; fileRef = C2BC9B13182BE39400D602B3 /* cityscape-10.png */; };
 		C2ED035518171C91007E1F38 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ED035418171C91007E1F38 /* LogInViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -73,39 +68,26 @@
 		B7FDB6A01817060400F434CE /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = ../Storyboard.storyboard; sourceTree = "<group>"; };
 		B7FDB6A51817083000F434CE /* NewAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewAccountViewController.h; path = ../NewAccountViewController.h; sourceTree = "<group>"; };
 		B7FDB6A61817083000F434CE /* NewAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewAccountViewController.m; path = ../NewAccountViewController.m; sourceTree = "<group>"; };
-		C20B22491819E18800A73668 /* Marcel_Claude_headshot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Marcel_Claude_headshot.jpg; sourceTree = "<group>"; };
 		C210716A18229446002A54A3 /* PersonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDetailViewController.h; sourceTree = "<group>"; };
 		C210716B18229446002A54A3 /* PersonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDetailViewController.m; sourceTree = "<group>"; };
 		C210716D18229B44002A54A3 /* SavedUserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedUserDetailViewController.h; sourceTree = "<group>"; };
 		C210716E18229B44002A54A3 /* SavedUserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedUserDetailViewController.m; sourceTree = "<group>"; };
-		C22BED551821A30C00870FCF /* PAWSearchRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAWSearchRadius.h; sourceTree = "<group>"; };
-		C22BED561821A30C00870FCF /* PAWSearchRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAWSearchRadius.m; sourceTree = "<group>"; };
-		C22BED591821A33600870FCF /* PAWCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAWCircleView.h; sourceTree = "<group>"; };
-		C22BED5A1821A33600870FCF /* PAWCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAWCircleView.m; sourceTree = "<group>"; };
 		C23B07801820104900CC4051 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
-		C248C97918228CEC00E9F128 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		C248C97A18228CEC00E9F128 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		C248C97C18228D5300E9F128 /* Nichole-Galicia-Headshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nichole-Galicia-Headshot.png"; sourceTree = "<group>"; };
+		C24680FC182B25740099E46D /* cityscape-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cityscape-01.png"; sourceTree = "<group>"; };
+		C2468108182B29300099E46D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		C2540A6C1819A35E0048EF22 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
 		C2540A6D1819A35E0048EF22 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
-		C2540A6F1819A3BF0048EF22 /* SearchGeoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchGeoViewController.m; sourceTree = "<group>"; };
-		C2540A701819A3BF0048EF22 /* WhoIsNearMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhoIsNearMeViewController.h; sourceTree = "<group>"; };
-		C2540A711819A3BF0048EF22 /* WhoIsNearMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhoIsNearMeViewController.m; sourceTree = "<group>"; };
 		C2540A741819A3D50048EF22 /* SavedUsersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedUsersViewController.h; sourceTree = "<group>"; };
 		C2540A751819A3D50048EF22 /* SavedUsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedUsersViewController.m; sourceTree = "<group>"; };
-		C2540A761819A3D50048EF22 /* SearchGeoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchGeoViewController.h; sourceTree = "<group>"; };
-		C2540A781819A3FD0048EF22 /* GeoPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPointAnnotation.h; sourceTree = "<group>"; };
-		C2540A791819A3FD0048EF22 /* GeoPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPointAnnotation.m; sourceTree = "<group>"; };
-		C2540A7A1819A3FD0048EF22 /* MasterGeoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterGeoViewController.h; sourceTree = "<group>"; };
-		C2540A7B1819A3FD0048EF22 /* MasterGeoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterGeoViewController.m; sourceTree = "<group>"; };
 		C2540A841819A4A10048EF22 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		C2540A861819A7C80048EF22 /* GeoQueryAnnotaion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoQueryAnnotaion.h; sourceTree = "<group>"; };
-		C2540A871819A7C80048EF22 /* GeoQueryAnnotaion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoQueryAnnotaion.m; sourceTree = "<group>"; };
+		C264077F1829547A003F93D7 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		C26407801829547A003F93D7 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		C264078518297E0F003F93D7 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
+		C264078618297E0F003F93D7 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
 		C28466B818187A3600320DB0 /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserProfileViewController.h; path = ../UserProfileViewController.h; sourceTree = "<group>"; };
 		C28466B918187A3600320DB0 /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserProfileViewController.m; path = ../UserProfileViewController.m; sourceTree = "<group>"; };
 		C29F95CC181DCC3500140BDB /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
 		C29F95CD181DCC3500140BDB /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
-		C2A56F351818311100933520 /* RememberMeLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RememberMeLogo.png; sourceTree = "<group>"; };
 		C2BA794D1816DFFD00F25769 /* RememberMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RememberMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2BA79501816DFFD00F25769 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C2BA79521816DFFD00F25769 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,10 +116,14 @@
 		C2BA7993181702BC00F25769 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C2BA7995181702CA00F25769 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C2BA7997181702D100F25769 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		C2BA7999181719D000F25769 /* linkedInLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkedInLogo.png; sourceTree = "<group>"; };
-		C2BD3ADB182160E2006635A8 /* amidst_the_fog_by_thevictor2225-d6oki88.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "amidst_the_fog_by_thevictor2225-d6oki88.jpg"; sourceTree = "<group>"; };
-		C2D554751821EFB0005EE5A3 /* PAWPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAWPost.h; sourceTree = "<group>"; };
-		C2D554761821EFB0005EE5A3 /* PAWPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAWPost.m; sourceTree = "<group>"; };
+		C2BC9AFD182B350B00D602B3 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		C2BC9B0A182B3D5300D602B3 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		C2BC9B0B182B3D5300D602B3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		C2BC9B0C182B3D5300D602B3 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		C2BC9B0D182B3D5300D602B3 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		C2BC9B0E182B3D5300D602B3 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		C2BC9B0F182B3D5300D602B3 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		C2BC9B13182BE39400D602B3 /* cityscape-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cityscape-10.png"; sourceTree = "<group>"; };
 		C2ED035318171C91007E1F38 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		C2ED035418171C91007E1F38 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +133,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2BC9B10182B3D5300D602B3 /* libTestFlight.a in Frameworks */,
+				C2BC9AFE182B350B00D602B3 /* AdSupport.framework in Frameworks */,
+				C2468115182B32FF0099E46D /* libz.dylib in Frameworks */,
 				C2540A851819A4A10048EF22 /* MapKit.framework in Frameworks */,
 				C2BA798C1817029900F25769 /* CoreLocation.framework in Frameworks */,
 				C2BA7998181702D100F25769 /* SystemConfiguration.framework in Frameworks */,
@@ -180,22 +169,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C22BED581821A31500870FCF /* New Group */ = {
+		C21071731822C051002A54A3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C2D554751821EFB0005EE5A3 /* PAWPost.h */,
-				C2D554761821EFB0005EE5A3 /* PAWPost.m */,
-				C22BED591821A33600870FCF /* PAWCircleView.h */,
-				C22BED5A1821A33600870FCF /* PAWCircleView.m */,
-				C22BED551821A30C00870FCF /* PAWSearchRadius.h */,
-				C22BED561821A30C00870FCF /* PAWSearchRadius.m */,
+				C28466B818187A3600320DB0 /* UserProfileViewController.h */,
+				C28466B918187A3600320DB0 /* UserProfileViewController.m */,
+				C210716D18229B44002A54A3 /* SavedUserDetailViewController.h */,
+				C210716E18229B44002A54A3 /* SavedUserDetailViewController.m */,
+				C2540A741819A3D50048EF22 /* SavedUsersViewController.h */,
+				C2540A751819A3D50048EF22 /* SavedUsersViewController.m */,
+				B7FDB6A51817083000F434CE /* NewAccountViewController.h */,
+				B7FDB6A61817083000F434CE /* NewAccountViewController.m */,
+				C210716A18229446002A54A3 /* PersonDetailViewController.h */,
+				C210716B18229446002A54A3 /* PersonDetailViewController.m */,
+				C29F95CC181DCC3500140BDB /* ResetPasswordViewController.h */,
+				C29F95CD181DCC3500140BDB /* ResetPasswordViewController.m */,
+				C2540A6D1819A35E0048EF22 /* EditProfileViewController.m */,
+				C2540A6C1819A35E0048EF22 /* EditProfileViewController.h */,
+				C2ED035418171C91007E1F38 /* LogInViewController.m */,
+				C2ED035318171C91007E1F38 /* LogInViewController.h */,
 			);
-			name = "New Group";
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		C2BA79441816DFFD00F25769 = {
 			isa = PBXGroup;
 			children = (
+				C2BC9B09182B3D5300D602B3 /* TestFlightSDK2.1.1 */,
 				C2BA79581816DFFD00F25769 /* RememberMe */,
 				C2BA79751816DFFD00F25769 /* RememberMeTests */,
 				C2BA794F1816DFFD00F25769 /* Frameworks */,
@@ -215,6 +215,8 @@
 		C2BA794F1816DFFD00F25769 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C2BC9AFD182B350B00D602B3 /* AdSupport.framework */,
+				C2468108182B29300099E46D /* libz.dylib */,
 				C23B07801820104900CC4051 /* FacebookSDK.framework */,
 				C2540A841819A4A10048EF22 /* MapKit.framework */,
 				C2BA7997181702D100F25769 /* SystemConfiguration.framework */,
@@ -243,37 +245,13 @@
 				C2BA79621816DFFD00F25769 /* AppDelegate.m */,
 				C2BA79611816DFFD00F25769 /* AppDelegate.h */,
 				B7FDB6A01817060400F434CE /* Storyboard.storyboard */,
-				C28466B818187A3600320DB0 /* UserProfileViewController.h */,
-				C28466B918187A3600320DB0 /* UserProfileViewController.m */,
-				C210716A18229446002A54A3 /* PersonDetailViewController.h */,
-				C210716B18229446002A54A3 /* PersonDetailViewController.m */,
-				C210716D18229B44002A54A3 /* SavedUserDetailViewController.h */,
-				C210716E18229B44002A54A3 /* SavedUserDetailViewController.m */,
-				C2ED035318171C91007E1F38 /* LogInViewController.h */,
-				C2ED035418171C91007E1F38 /* LogInViewController.m */,
-				B7FDB6A51817083000F434CE /* NewAccountViewController.h */,
-				B7FDB6A61817083000F434CE /* NewAccountViewController.m */,
-				C29F95CC181DCC3500140BDB /* ResetPasswordViewController.h */,
-				C29F95CD181DCC3500140BDB /* ResetPasswordViewController.m */,
-				C2540A6D1819A35E0048EF22 /* EditProfileViewController.m */,
-				C2540A6C1819A35E0048EF22 /* EditProfileViewController.h */,
-				C2540A781819A3FD0048EF22 /* GeoPointAnnotation.h */,
-				C2540A791819A3FD0048EF22 /* GeoPointAnnotation.m */,
-				C2540A861819A7C80048EF22 /* GeoQueryAnnotaion.h */,
-				C2540A871819A7C80048EF22 /* GeoQueryAnnotaion.m */,
-				C2540A7A1819A3FD0048EF22 /* MasterGeoViewController.h */,
-				C2540A7B1819A3FD0048EF22 /* MasterGeoViewController.m */,
-				C2540A6F1819A3BF0048EF22 /* SearchGeoViewController.m */,
-				C2540A761819A3D50048EF22 /* SearchGeoViewController.h */,
-				C2540A741819A3D50048EF22 /* SavedUsersViewController.h */,
-				C2540A751819A3D50048EF22 /* SavedUsersViewController.m */,
-				C248C97918228CEC00E9F128 /* Person.h */,
-				C248C97A18228CEC00E9F128 /* Person.m */,
-				C2540A701819A3BF0048EF22 /* WhoIsNearMeViewController.h */,
-				C2540A711819A3BF0048EF22 /* WhoIsNearMeViewController.m */,
+				C264078518297E0F003F93D7 /* ImageCell.h */,
+				C264078618297E0F003F93D7 /* ImageCell.m */,
+				C264077F1829547A003F93D7 /* Person.h */,
+				C26407801829547A003F93D7 /* Person.m */,
+				C21071731822C051002A54A3 /* ViewControllers */,
 				C2BA79671816DFFD00F25769 /* Images.xcassets */,
 				C2BA79641816DFFD00F25769 /* RememberMe.xcdatamodeld */,
-				C22BED581821A31500870FCF /* New Group */,
 				C2BA79591816DFFD00F25769 /* Supporting Files */,
 			);
 			path = RememberMe;
@@ -308,14 +286,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C2BC9B09182B3D5300D602B3 /* TestFlightSDK2.1.1 */ = {
+			isa = PBXGroup;
+			children = (
+				C2BC9B0A182B3D5300D602B3 /* libTestFlight.a */,
+				C2BC9B0B182B3D5300D602B3 /* README.md */,
+				C2BC9B0C182B3D5300D602B3 /* release_notes.md */,
+				C2BC9B0D182B3D5300D602B3 /* TestFlight+AsyncLogging.h */,
+				C2BC9B0E182B3D5300D602B3 /* TestFlight+ManualSessions.h */,
+				C2BC9B0F182B3D5300D602B3 /* TestFlight.h */,
+			);
+			path = TestFlightSDK2.1.1;
+			sourceTree = "<group>";
+		};
 		C2ED035218171BB2007E1F38 /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
-				C2BD3ADB182160E2006635A8 /* amidst_the_fog_by_thevictor2225-d6oki88.jpg */,
-				C20B22491819E18800A73668 /* Marcel_Claude_headshot.jpg */,
-				C248C97C18228D5300E9F128 /* Nichole-Galicia-Headshot.png */,
-				C2A56F351818311100933520 /* RememberMeLogo.png */,
-				C2BA7999181719D000F25769 /* linkedInLogo.png */,
+				C2BC9B13182BE39400D602B3 /* cityscape-10.png */,
+				C24680FC182B25740099E46D /* cityscape-01.png */,
 			);
 			name = Pictures;
 			sourceTree = "<group>";
@@ -367,6 +355,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Daniel Baldwin & Ibrahim Ayad";
 				TargetAttributes = {
+					C2BA794C1816DFFD00F25769 = {
+						DevelopmentTeam = AWBGJR4PY5;
+					};
 					C2BA796C1816DFFD00F25769 = {
 						TestTargetID = C2BA794C1816DFFD00F25769;
 					};
@@ -395,14 +386,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2BD3ADC182160E2006635A8 /* amidst_the_fog_by_thevictor2225-d6oki88.jpg in Resources */,
-				C2A56F361818311100933520 /* RememberMeLogo.png in Resources */,
-				C20B224A1819E18800A73668 /* Marcel_Claude_headshot.jpg in Resources */,
+				C2BC9B12182B3D5300D602B3 /* release_notes.md in Resources */,
+				C2BC9B14182BE39400D602B3 /* cityscape-10.png in Resources */,
 				C2BA795D1816DFFD00F25769 /* InfoPlist.strings in Resources */,
 				C2BA79681816DFFD00F25769 /* Images.xcassets in Resources */,
-				C248C97D18228D5300E9F128 /* Nichole-Galicia-Headshot.png in Resources */,
-				C2BA799A181719D000F25769 /* linkedInLogo.png in Resources */,
+				C2BC9B11182B3D5300D602B3 /* README.md in Resources */,
 				B7FDB6A11817060400F434CE /* Storyboard.storyboard in Resources */,
+				C24680FD182B25740099E46D /* cityscape-01.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,25 +412,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2BA79631816DFFD00F25769 /* AppDelegate.m in Sources */,
-				C2540A731819A3BF0048EF22 /* WhoIsNearMeViewController.m in Sources */,
-				C2540A7C1819A3FD0048EF22 /* GeoPointAnnotation.m in Sources */,
 				C2BA795F1816DFFD00F25769 /* main.m in Sources */,
-				C22BED571821A30C00870FCF /* PAWSearchRadius.m in Sources */,
+				C26407811829547A003F93D7 /* Person.m in Sources */,
 				C2540A6E1819A35E0048EF22 /* EditProfileViewController.m in Sources */,
-				C248C97B18228CEC00E9F128 /* Person.m in Sources */,
-				C2D554771821EFB0005EE5A3 /* PAWPost.m in Sources */,
 				C2ED035518171C91007E1F38 /* LogInViewController.m in Sources */,
-				C2540A881819A7C80048EF22 /* GeoQueryAnnotaion.m in Sources */,
 				C210716F18229B44002A54A3 /* SavedUserDetailViewController.m in Sources */,
 				C29F95CE181DCC3500140BDB /* ResetPasswordViewController.m in Sources */,
-				C2540A7D1819A3FD0048EF22 /* MasterGeoViewController.m in Sources */,
-				C2540A721819A3BF0048EF22 /* SearchGeoViewController.m in Sources */,
+				C264078718297E0F003F93D7 /* ImageCell.m in Sources */,
 				C2BA79661816DFFD00F25769 /* RememberMe.xcdatamodeld in Sources */,
 				C210716C18229446002A54A3 /* PersonDetailViewController.m in Sources */,
 				C28466BA18187A3600320DB0 /* UserProfileViewController.m in Sources */,
 				B7FDB6A71817083000F434CE /* NewAccountViewController.m in Sources */,
 				C2540A771819A3D50048EF22 /* SavedUsersViewController.m in Sources */,
-				C22BED5B1821A33600870FCF /* PAWCircleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +542,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Baldwin (RR459NXT2Y)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniel Baldwin (RR459NXT2Y)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -567,7 +552,15 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RememberMe/RememberMe-Prefix.pch";
 				INFOPLIST_FILE = "RememberMe/RememberMe-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/danielbaldwin/Dropbox/RememberMe/TestFlightSDK2.0.2,
+					/Users/danielbaldwin/Dropbox/RememberMe/RememberMe/TestFlightSDK2.0.2,
+					/Users/danielbaldwin/Dropbox/RememberMe/TestFlightSDK2.1.1,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "548E6324-03E8-4292-9839-E4540780ECD3";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -577,6 +570,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Baldwin (RR459NXT2Y)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniel Baldwin (RR459NXT2Y)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -585,7 +580,15 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RememberMe/RememberMe-Prefix.pch";
 				INFOPLIST_FILE = "RememberMe/RememberMe-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/danielbaldwin/Dropbox/RememberMe/TestFlightSDK2.0.2,
+					/Users/danielbaldwin/Dropbox/RememberMe/RememberMe/TestFlightSDK2.0.2,
+					/Users/danielbaldwin/Dropbox/RememberMe/TestFlightSDK2.1.1,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "548E6324-03E8-4292-9839-E4540780ECD3";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

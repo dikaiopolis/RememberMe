@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+#import "Person.h"
 
-@interface SavedUsersViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface SavedUsersViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+
+
+
+@property (strong, nonatomic) NSMutableArray *savedUsersArray;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) Person *personToPass;
 
 @end

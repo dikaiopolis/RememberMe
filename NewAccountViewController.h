@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 
 
-@interface NewAccountViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+@interface NewAccountViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *fullNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
@@ -20,12 +20,16 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *companyTextField;
 
-@property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextField;
-
 @property (weak, nonatomic) IBOutlet UITextField *jobTitleTextField;
 
-- (IBAction)onCreateAccountButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
+@property UIImagePickerController *picker;
+
+- (IBAction)onSaveButtonPressed:(id)sender;
+
+
+- (IBAction)onAddPhotoButtonPressed:(id)sender;
 
 
 @end

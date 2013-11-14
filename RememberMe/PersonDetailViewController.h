@@ -7,16 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Person.h"
 
 @interface PersonDetailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *personNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *personImageView;
 @property (weak, nonatomic) IBOutlet UITextView *notesTextView;
-@property (weak, nonatomic) IBOutlet UIButton *saveUserButton;
+@property (weak, nonatomic) IBOutlet UILabel *jobTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *companyLabel;
 
-- (IBAction)onContactInfoButtonPressed:(id)sender;
+@property (strong, nonatomic) Person *person;
 
-- (IBAction)onSendYourContactInfoButtonPressed:(id)sender;
+- (IBAction)onBackButtonPressed:(id)sender;
 
 
 @end
